@@ -46,7 +46,7 @@
             </el-switch>
           </template>
         </el-table-column>
-        <el-table-column label="操作" width="180px">
+        <el-table-column label="操作" width="220px">
           <template slot-scope="scope">
             <!-- 修改按钮 -->
             <el-button
@@ -259,6 +259,7 @@ export default {
       if (res.meta.status !== 200) {
         return this.$message.error('获取用户列表失败')
       }
+      this.userlist = res.data.users
       this.total = res.data.total
       console.log(res)
     },
